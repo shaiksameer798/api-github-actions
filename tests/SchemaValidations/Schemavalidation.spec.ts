@@ -89,7 +89,10 @@ const result = validatebody(responseBody);
 
 
 console.log(result);
-expect(validatebody(responseBody)).toBeTruthy();
+if (!result) {
+  console.log(validatebody.errors);
+}
+expect(result).toBeTruthy();
   
 
 });

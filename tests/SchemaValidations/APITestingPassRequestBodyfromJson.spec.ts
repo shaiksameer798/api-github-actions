@@ -36,10 +36,6 @@ test("Post request test", async ({ request }) => {
 test("Put request test", async ({ request }) => {
     
 
-
-
-
-
     const auth=await request.post('/auth',{
 
 
