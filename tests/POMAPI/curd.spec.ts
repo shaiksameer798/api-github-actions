@@ -6,8 +6,17 @@ import { test } from './fixtres';
 import { Booking } from './models';
 import { PatchBooking } from './Patch';
 
+
+
+test("Id Parameter Test", async ({ request }) => {
+    const response = await request.get('/booking');
+    console.log(await response.json());
+});
+
 test("Create booking", async ({ request , bookingAPI,tokensed , bookingId}) => {
     console.log(tokensed);
+
+
    const  res=await bookingAPI.createBooking(2);
     console.log(await res.json());
     const bookingdata: Booking =

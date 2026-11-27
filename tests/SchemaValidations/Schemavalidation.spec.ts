@@ -3,6 +3,11 @@ import {request ,test,expect} from '@playwright/test';
 import Ajv from "ajv";
 
 
+test("Id Parameter Test", async ({ request }) => {
+    const response = await request.get('/booking');
+    console.log(await response.json());
+});
+
 test("GET Curl ",async({request})=>{
     
     const req=await request.get('/booking/101');
@@ -32,7 +37,7 @@ test("GET Curl ",async({request})=>{
 test( "AJV Schema Validation",async({request})=>{
 
 
-const response = await request.get('/booking/100');
+const response = await request.get('/booking/69');
     const responseBody = await response.json();
 
 
