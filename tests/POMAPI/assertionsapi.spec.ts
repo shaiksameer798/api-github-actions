@@ -4,7 +4,7 @@ import { request, test, expect } from '@playwright/test';
 
 test('Get Curl p5 Path Parameter ', async ({ request}) => {
  
-  const response5 = await request.get('/booking/24');
+  const response5 = await request.get('/booking/25');
 console.log(response5.status());
 
 
